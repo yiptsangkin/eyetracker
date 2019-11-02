@@ -1,0 +1,69 @@
+.train-circle-wrp{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin: 10px;
+    position: absolute;
+}
+
+.train-circle-wrp:hover{
+    border: 1px solid #76d472;
+}
+
+.train-circle-wrp .train-circle{
+    width: 4px;
+    height: 4px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #ce5a4c;
+    margin-top: 14px;
+}
+
+.train-circle-wrp:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+.train-circle-wrp:nth-child(2) {
+    left: 50%;
+    margin-left: -16px;   
+    top: 0;
+}
+.train-circle-wrp:nth-child(3) {
+    right: 0;
+    top: 0;
+}
+.train-circle-wrp:nth-child(4) {
+    top: 50%;
+    margin-top: -16px;
+    left: 0;
+}
+.train-circle-wrp:nth-child(5) {
+    top: 50%;
+    margin-top: -16px;
+    left: 50%;
+    margin-left: -16px;   
+}
+.train-circle-wrp:nth-child(6) {
+    top: 50%;
+    margin-top: -16px;
+    right: 0;
+}
+.train-circle-wrp:nth-child(7) {
+    left: 0;
+    bottom: 0;
+}
+.train-circle-wrp:nth-child(8) {
+    left: 50%;
+    margin-left: -16px;   
+    bottom: 0;
+}
+.train-circle-wrp:nth-child(9) {
+    right: 0;
+    bottom: 0;
+}
+
+#tracker-hot-map{
+    position: absolute!important;
+}

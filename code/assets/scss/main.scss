@@ -1,0 +1,237 @@
+@import 'params';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    width: 320px;
+    background-color: $bg-color;
+    .error-msg{
+        background-color: rgba($color-red, 0.8);
+        height: 18px;
+        line-height: 18px;
+        padding: 0 6px;
+        color: #fff;
+        display: none;
+        transition: .8s;
+    }
+    .success-msg{
+        background-color: rgba($color-green, 0.8);
+        height: 18px;
+        line-height: 18px;
+        padding: 0 6px;
+        color: #fff;
+        display: none;
+        transition: .8s;
+    }
+    .com-ctx{
+        &.swiper-wrapper{
+            box-sizing: border-box;
+        }
+        .default-part.swiper-slide{
+            width: 100%!important;
+        }
+    }
+    .com-header{
+        padding: 12px;
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            &.pd-name{
+                color: $color-ge;
+                font-weight: 600;
+                font-size: 16px;
+                margin-left: 4px;
+            }
+            &.pd-logo{
+                img{
+                    display: block;
+                    width: 20px;
+                }
+            }
+            &.pd-setting{
+                float: right;
+                margin-top: 2px;
+                cursor: pointer;
+                img{
+                    display: block;
+                    width: 16px;
+                }
+            }
+            &.pd-back{
+                cursor: pointer;
+                img{
+                    display: block;
+                    width: 18px;
+                }
+            }
+        }
+    }
+    .base-data-card{
+        display: flex;
+        padding: 12px 12px 0 12px;
+        &.last-child{
+            padding-bottom: 12px;
+        }
+        .com-card{
+            padding: 8px 10px;
+            .card-title{
+                font-size: 12px;
+                line-height: 1;
+                color: $color-gold;
+            }
+        }
+        .all-click{
+            flex: 1;
+            height: 56px;
+            border-radius: 4px;
+            margin: 0 4px 0 0px;
+            background-color: $color-pp;
+        }
+        .target-click{
+            flex: 1;
+            height: 56px;
+            border-radius: 4px;
+            margin: 0 4px 0 0px;
+            background-color: $color-pink;
+        }
+        .all-impression{
+            flex: 1;
+            height: 56px;
+            border-radius: 6px;
+            margin: 0 0px 0 6px;
+            background-color: $color-yl;
+        }
+        .target-impression{
+            flex: 1;
+            height: 56px;
+            border-radius: 6px;
+            margin: 0 0px 0 6px;
+            background-color: $color-lgreen;
+        }
+        .card-value{
+            color: $color-gf;
+            font-size: 20px;
+            text-align: right;
+            margin-top: 5px;
+        }
+    }
+    .com-title{
+        background-color: rgba($color-gf, 0.08);
+        height: 24px;
+        line-height: 24px;
+        padding: 0 18px;
+        color: $color-gf;
+        display: flex;
+        justify-content: space-between;
+        .add-btn{
+            cursor: pointer;
+        }
+    }
+    .default-part{
+        .gender-statistics{
+            color: $color-gf;
+            padding: 0 16px;
+            height: 24px;
+            line-height: 24px;
+        }
+        #gender-chart{
+            height: 120px;
+        }
+        #age-chart{
+            height: 220px;
+            padding: 0 14px;
+        }
+    }
+    .setting-part{
+        .com-header{
+            padding: 12px;
+        }
+        .setting-list{
+            ul{
+                li{
+                    height: 36px;
+                    line-height: 36px;
+                    color: $color-gf;
+                    padding-left: 18px;
+                    padding-right: 12px;
+                    display: flex;
+                    &:hover{
+                        background-color: $color-pp;
+                    }
+                    .item-name{
+                        flex: 1;
+                    }
+                    .switch-btn{
+                        width: 32px;
+                        height: 18px;
+                        background-color: $color-gc;
+                        border-radius: 9px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        &.actived {
+                            background-color: $color-green;
+                            .switch-circle{
+                                margin-left: 15px;
+                            }
+                        }
+                        .switch-circle{
+                            height: 16px;
+                            width: 16px;
+                            border-radius: 50%;
+                            background-color: $color-gf;
+                            display: block;
+                            margin-top: 1px;
+                            margin-left: 1px;
+                            cursor: pointer;
+                            box-shadow: -1px 1px 1px 1px rgba($color-g0, 0.3);
+                            transition: .3s;
+                        }
+                    }
+                    .item-btn {
+                        height: 18px;
+                        padding: 0 6px;
+                        border: 1px solid $color-gold;
+                        line-height: 16px;
+                        color: $color-gold;
+                        border-radius: 9px;
+                        margin-top: 9px;
+                        margin-left: 8px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .target-list, .hot-map-list{
+            ul{
+                li{
+                    display: flex;
+                    height: 36px;
+                    line-height: 36px;
+                    padding-left: 18px;
+                    padding-right: 4px;
+                    input, select{
+                        border: 0;
+                        border: none;
+                        background-color: rgba(0,0,0,0);
+                        flex: 1;
+                        color: $color-gf;
+                    }
+                    .close-icon{
+                        padding: 0 8px;
+                        color: $color-gf;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

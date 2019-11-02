@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/lib/swiper.min.css">
+    <title>Webtracker</title>
+</head>
+
+<body>
+    <div class="error-msg"></div>
+    <div class="success-msg"></div>
+    <div class="com-ctx-wrp swiper-container">
+        <div class="com-ctx swiper-wrapper">
+            <div class="default-part swiper-slide">
+                <div class="com-header">
+                    <span class="pd-logo">
+                        <img src="./assets/images/eye-64.png" alt="">
+                    </span>
+                    <span class="pd-name">WEBTRACKER</span>
+                    <span class="pd-setting">
+                        <img src="./assets/images/setting.png" alt="">
+                    </span>
+                </div>
+                <div class="com-title">base data</div>
+                <div class="base-data-card">
+                    <div class="com-card all-click">
+                        <div class="card-title">Click</div>
+                        <div class="card-value">0</div>
+                    </div>
+                    <div class="com-card all-impression">
+                        <div class="card-title">Impression</div>
+                        <div class="card-value">0</div>
+                    </div>
+                </div>
+                <div class="base-data-card last-child">
+                    <div class="com-card target-click">
+                        <div class="card-title">Target Click</div>
+                        <div class="card-value">0</div>
+                    </div>
+                    <div class="com-card target-impression">
+                        <div class="card-title">Target Impression</div>
+                        <div class="card-value">0</div>
+                    </div>
+                </div>
+                <div class="com-title">user data</div>
+                <div class="gender-statistics">Gender Statistics</div>
+                <div id="gender-chart"></div>
+                <div class="gender-statistics">Age Statistics</div>
+                <div id="age-chart"></div>
+            </div>
+            <div class="setting-part swiper-slide">
+                <div class="com-header">
+                    <span class="pd-back">
+                        <img src="./assets/images/back.png" alt="">
+                    </span>
+                    <span class="pd-name">Setting</span>
+                </div>
+                <div class="com-title">switch list</div>
+                <div class="setting-list">
+                    <ul>
+                        <li>
+                            <span class="item-name">Impression</span>
+                            <span class="switch-wrp">
+                                <span class="impression-switch switch-btn" switch-type="impression">
+                                    <span class="switch-circle"></span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="item-name">Click</span>
+                            <span class="switch-wrp">
+                                <span class="click-switch switch-btn" switch-type="click">
+                                    <span class="switch-circle"></span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="item-name">Eye Movement</span>
+                            <span class="switch-wrp">
+                                <span class="eye-switch switch-btn" switch-type="eyemovement">
+                                    <span class="switch-circle"></span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="item-name">Show Target Border</span>
+                            <span class="switch-wrp">
+                                <span class="target-border-switch switch-btn" switch-type="targetborder">
+                                    <span class="switch-circle"></span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="item-name">Show Hot Map</span>
+                            <span class="switch-wrp">
+                                <span class="hot-map-switch switch-btn" switch-type="hotmap">
+                                    <span class="switch-circle"></span>
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="hot-map-opt">
+                    <div class="com-title">hot map option</div>
+                    <div class="hot-map-list">
+                        <ul>
+                            <li>
+                                <select id="hot-map-sex">
+                                    <option value="0">all</option>
+                                    <option value="1">male</option>
+                                    <option value="2">female</option>
+                                </select>
+                                <select id="hot-map-age">
+                                    <option value="0">all</option>
+                                    <option value="1">under 18</option>
+                                    <option value="2">18~24</option>
+                                    <option value="3">25~29</option>
+                                    <option value="4">30~39</option>
+                                    <option value="5">40~49</option>
+                                    <option value="6">above 50</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="com-title">
+                    <span>target list</span>
+                    <span class="add-btn">+</span>
+                </div>
+                <div class="target-list">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="com-title">other</div>
+                <div class="setting-list">
+                    <ul>
+                        <li>
+                            <span class="item-name">get eye movement training data</span>
+                            <span class="item-btn" id="clear-train-data">
+                                clear
+                            </span>
+                            <span class="item-btn" id="op-train-data">
+                                start
+                            </span>
+                        </li>
+                        <li>
+                            <span class="item-name">clear data</span>
+                            <span class="item-btn" id="clear-click-data">
+                                clear
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/lib/crypto-js.js"></script>
+<script src="./assets/js/lib/swiper.min.js"></script>
+<script src="./assets/js/lib/axios.min.js"></script>
+<script src="./assets/js/lib/echarts.min.js"></script>
+<script src="./assets/js/lib/dark.js"></script>
+<script src="./assets/js/utils.js"></script>
+<script src="./assets/js/popup.js"></script>
+
+</html>

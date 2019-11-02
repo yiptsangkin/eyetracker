@@ -1,0 +1,56 @@
+{
+    "name": "Webtracker",
+    "description": "A Chrome extension for tracking user behavior datas base on Mouse Event and Eye Movement",
+    "version": "1.0",
+    "manifest_version": 2,
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "assets/js/lib/axios.min.js",
+            "assets/js/lib/crypto-js.js",
+            "assets/js/utils.js",
+            "assets/js/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "assets/js/lib/axios.min.js",
+                "assets/js/lib/localforage.min.js",
+                "assets/js/lib/searchgazer.js",
+                "assets/js/impression.tracker.js",
+                "assets/js/mouse.tracker.js",
+                "assets/js/eyemovement.tracker.js",
+                "assets/js/lib/heatmap.min.js",
+                "assets/js/transfer.js"
+            ],
+            "css": [
+                "assets/css/extension.css"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "geolocation",
+        "storage",
+        "background",
+        "contextMenus",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/*"
+    ],
+    "browser_action": {
+        "default_icon": "assets/images/eye.png",
+        "default_title": "Webtracker",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "assets/images/eye-16.png",
+        "32": "assets/images/eye-32.png",
+        "48": "assets/images/eye-64.png",
+        "128": "assets/images/eye.png"
+    }
+}
